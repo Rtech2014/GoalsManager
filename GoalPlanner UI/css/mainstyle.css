@@ -1,0 +1,73 @@
+@import "datestyle.min.css";
+* {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+	font-size: 1.7em;
+	font-weight: lighter;
+	letter-spacing: 1em;
+}
+hr {
+	border-width: 2px;
+	color: #7f8c8d;
+	margin: 4px 33em 3em 30em;
+}
+.text-center {
+	margin-bottom: 5px;
+}
+
+.goal-input {
+	width: 630px;
+}
+.deadline {
+	width: 340px;
+
+}
+.wrap {
+	margin-right: 150px;
+}
+.wrapper input[type="text"] {
+    position: relative;
+}
+
+/*input { font-family: 'FontAwesome'; }
+
+.wrapper1:before {
+    font-family: 'FontAwesome';
+    color: #f1c40f;
+    position: relative;
+    left: 13px;
+    top: 27px;
+    content: "\26AC";
+}
+.input:hover {
+	visibility: hidden;
+}*/
+label {
+	letter-spacing: 0.1em;
+}
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+		background: #2196f3;
+		color: white;
+    }
+.action-steps {
+		border: 1px solid #cccccc;
+    width: 472px;
+    border-radius: 9px;
+    height: 374px;
+    margin: -313px 12px -117px 670px;
+		/*padding: 23px 34px 55px 55px*/
+}
+.action-title{
+	margin: -508px 15px 45px 635px;
+}
+.btn-xlarge {
+	width: auto;
+}

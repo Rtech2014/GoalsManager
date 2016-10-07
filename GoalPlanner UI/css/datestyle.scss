@@ -1,0 +1,744 @@
+//colors
+$color_celeste_approx: #ccc;
+$black_20: rgba(0, 0, 0, 0.2);
+$white: #ffffff;
+$color_mountain_mist_approx: #999;
+$color_gallery_approx: #eeeeee;
+$color_golden_glow_approx: #fde19a;
+$color_cherokee_approx: #fdd49a;
+$color_picasso_approx: #fdf59a;
+$color_gorse_approx: #fbed50;
+$black_10: rgba(0, 0, 0, 0.1);
+$black_25: rgba(0, 0, 0, 0.25);
+$black: #000;
+$color_paris_daisy_approx: #fbf069;
+$color_golden_sand_approx: #f3d17a;
+$color_rob_roy_approx: #f3c17a;
+$color_manz_approx: #f3e97a;
+$color_golden_dream_approx: #edde34;
+$color_starship_approx: #efe24b;
+$color_star_dust_approx: #9e9e9e;
+$color_nobel_approx: #b3b3b3;
+$gray: #808080;
+$color_chicago_approx: #595959;
+$color_storm_dust_approx: #666666;
+$color_science_blue_approx: #006dcc;
+$color_lochmara_approx: #0088cc;
+$color_cobalt_approx: #0044cc;
+$color_resolution_blue_approx: #002a80;
+$smalt: #003399;
+
+//@extend-elements
+//original selectors
+//.datepicker td, .datepicker th
+%extend_1 {
+	text-align: center;
+	width: 20px;
+	height: 20px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	border: none;
+}
+
+//original selectors
+//.datepicker table tr td.disabled, .datepicker table tr td.disabled:hover
+%extend_2 {
+	background: none;
+	color: $color_mountain_mist_approx;
+	cursor: default;
+}
+
+//original selectors
+//.datepicker table tr td.today, .datepicker table tr td.today:hover, .datepicker table tr td.today.disabled, .datepicker table tr td.today.disabled:hover
+%extend_3 {
+	background-color: $color_golden_glow_approx;
+	background-image: linear-gradient(top, $color_cherokee_approx, $color_picasso_approx);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_cherokee_approx', endcolorstr='$color_picasso_approx', gradienttype=0);
+	border-color: $color_picasso_approx $color_picasso_approx $color_gorse_approx;
+	border-color: $black_10 $black_10 $black_25;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	color: $black;
+}
+
+//original selectors
+//.datepicker table tr td.range.today, .datepicker table tr td.range.today:hover, .datepicker table tr td.range.today.disabled, .datepicker table tr td.range.today.disabled:hover
+%extend_4 {
+	background-color: $color_golden_sand_approx;
+	background-image: linear-gradient(top, $color_rob_roy_approx, $color_manz_approx);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_rob_roy_approx', endcolorstr='$color_manz_approx', gradienttype=0);
+	border-color: $color_manz_approx $color_manz_approx $color_golden_dream_approx;
+	border-color: $black_10 $black_10 $black_25;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0;
+}
+
+//original selectors
+//.datepicker table tr td.selected, .datepicker table tr td.selected:hover, .datepicker table tr td.selected.disabled, .datepicker table tr td.selected.disabled:hover
+%extend_5 {
+	background-color: $color_star_dust_approx;
+	background-image: linear-gradient(top, $color_nobel_approx, $gray);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_nobel_approx', endcolorstr='$gray', gradienttype=0);
+	border-color: $gray $gray $color_chicago_approx;
+	border-color: $black_10 $black_10 $black_25;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	color: $white;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 -1px 0 $black_25;
+}
+
+//original selectors
+//.datepicker table tr td.active, .datepicker table tr td.active:hover, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover
+%extend_6 {
+	background-color: $color_science_blue_approx;
+	background-image: linear-gradient(top, $color_lochmara_approx, $color_cobalt_approx);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_lochmara_approx', endcolorstr='$color_cobalt_approx', gradienttype=0);
+	border-color: $color_cobalt_approx $color_cobalt_approx $color_resolution_blue_approx;
+	border-color: $black_10 $black_10 $black_25;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	color: $white;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 -1px 0 $black_25;
+}
+
+//original selectors
+//.datepicker table tr td span.disabled, .datepicker table tr td span.disabled:hover
+%extend_7 {
+	background: none;
+	color: $color_mountain_mist_approx;
+	cursor: default;
+}
+
+//original selectors
+//.datepicker table tr td span.active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled:hover
+%extend_8 {
+	background-color: $color_science_blue_approx;
+	background-image: linear-gradient(top, $color_lochmara_approx, $color_cobalt_approx);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_lochmara_approx', endcolorstr='$color_cobalt_approx', gradienttype=0);
+	border-color: $color_cobalt_approx $color_cobalt_approx $color_resolution_blue_approx;
+	border-color: $black_10 $black_10 $black_25;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	color: $white;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 -1px 0 $black_25;
+}
+
+//original selectors
+//.input-append.date .add-on i, .input-prepend.date .add-on i
+%extend_9 {
+	display: block;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+}
+
+
+.datepicker {
+	padding: 4px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	direction: ltr;
+	&.datepicker-rtl {
+		direction: rtl;
+		table tr td span {
+			float: right;
+		}
+	}
+	> div {
+		display: none;
+	}
+	table {
+		margin: 0;
+		//Instead of the line below you could use @include user-select($select)
+		user-select: none;
+		tr td {
+			&.old {
+				color: $color_mountain_mist_approx;
+			}
+			&.new {
+				color: $color_mountain_mist_approx;
+			}
+			&.disabled {
+				@extend %extend_2;
+				&:hover {
+					@extend %extend_2;
+				}
+			}
+			&.today {
+				@extend %extend_3;
+				&:hover {
+					@extend %extend_3;
+					background-color: $color_picasso_approx;
+					&:hover {
+						background-color: $color_picasso_approx;
+						color: $black;
+					}
+					&:active {
+						background-color: $color_picasso_approx;
+						background-color: $color_paris_daisy_approx \9;
+					}
+					&.active {
+						background-color: $color_picasso_approx;
+						background-color: $color_paris_daisy_approx \9;
+					}
+					&.disabled {
+						background-color: $color_picasso_approx;
+					}
+				}
+				&.disabled {
+					@extend %extend_3;
+					background-color: $color_picasso_approx;
+					&:hover {
+						@extend %extend_3;
+						background-color: $color_picasso_approx;
+						&:hover {
+							background-color: $color_picasso_approx;
+						}
+						&:active {
+							background-color: $color_picasso_approx;
+							background-color: $color_paris_daisy_approx \9;
+						}
+						&.active {
+							background-color: $color_picasso_approx;
+							background-color: $color_paris_daisy_approx \9;
+						}
+						&.disabled {
+							background-color: $color_picasso_approx;
+						}
+					}
+					&:active {
+						background-color: $color_picasso_approx;
+						background-color: $color_paris_daisy_approx \9;
+					}
+					&.active {
+						background-color: $color_picasso_approx;
+						background-color: $color_paris_daisy_approx \9;
+					}
+					&.disabled {
+						background-color: $color_picasso_approx;
+					}
+					&:hover[disabled] {
+						background-color: $color_picasso_approx;
+					}
+				}
+				&:active {
+					background-color: $color_picasso_approx;
+					background-color: $color_paris_daisy_approx \9;
+				}
+				&.active {
+					background-color: $color_picasso_approx;
+					background-color: $color_paris_daisy_approx \9;
+					&:hover {
+						color: $white;
+					}
+				}
+				&:hover[disabled] {
+					background-color: $color_picasso_approx;
+				}
+				&.disabled[disabled] {
+					background-color: $color_picasso_approx;
+				}
+			}
+			&.today[disabled] {
+				background-color: $color_picasso_approx;
+			}
+			&.range {
+				background: $color_gallery_approx;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 0;
+				&:hover {
+					background: $color_gallery_approx;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 0;
+				}
+				&.disabled {
+					background: $color_gallery_approx;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 0;
+					&:hover {
+						background: $color_gallery_approx;
+						//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+						border-radius: 0;
+					}
+				}
+				&.today {
+					@extend %extend_4;
+					&:hover {
+						@extend %extend_4;
+						background-color: $color_manz_approx;
+						&:hover {
+							background-color: $color_manz_approx;
+						}
+						&:active {
+							background-color: $color_manz_approx;
+							background-color: $color_starship_approx \9;
+						}
+						&.active {
+							background-color: $color_manz_approx;
+							background-color: $color_starship_approx \9;
+						}
+						&.disabled {
+							background-color: $color_manz_approx;
+						}
+					}
+					&.disabled {
+						@extend %extend_4;
+						background-color: $color_manz_approx;
+						&:hover {
+							@extend %extend_4;
+							background-color: $color_manz_approx;
+							&:hover {
+								background-color: $color_manz_approx;
+							}
+							&:active {
+								background-color: $color_manz_approx;
+								background-color: $color_starship_approx \9;
+							}
+							&.active {
+								background-color: $color_manz_approx;
+								background-color: $color_starship_approx \9;
+							}
+							&.disabled {
+								background-color: $color_manz_approx;
+							}
+						}
+						&:active {
+							background-color: $color_manz_approx;
+							background-color: $color_starship_approx \9;
+						}
+						&.active {
+							background-color: $color_manz_approx;
+							background-color: $color_starship_approx \9;
+						}
+						&.disabled {
+							background-color: $color_manz_approx;
+						}
+						&:hover[disabled] {
+							background-color: $color_manz_approx;
+						}
+					}
+					&:active {
+						background-color: $color_manz_approx;
+						background-color: $color_starship_approx \9;
+					}
+					&.active {
+						background-color: $color_manz_approx;
+						background-color: $color_starship_approx \9;
+					}
+					&:hover[disabled] {
+						background-color: $color_manz_approx;
+					}
+					&.disabled[disabled] {
+						background-color: $color_manz_approx;
+					}
+				}
+				&.today[disabled] {
+					background-color: $color_manz_approx;
+				}
+			}
+			&.selected {
+				@extend %extend_5;
+				&:hover {
+					@extend %extend_5;
+					background-color: $gray;
+					&:hover {
+						background-color: $gray;
+					}
+					&:active {
+						background-color: $gray;
+						background-color: $color_storm_dust_approx \9;
+					}
+					&.active {
+						background-color: $gray;
+						background-color: $color_storm_dust_approx \9;
+					}
+					&.disabled {
+						background-color: $gray;
+					}
+				}
+				&.disabled {
+					@extend %extend_5;
+					background-color: $gray;
+					&:hover {
+						@extend %extend_5;
+						background-color: $gray;
+						&:hover {
+							background-color: $gray;
+						}
+						&:active {
+							background-color: $gray;
+							background-color: $color_storm_dust_approx \9;
+						}
+						&.active {
+							background-color: $gray;
+							background-color: $color_storm_dust_approx \9;
+						}
+						&.disabled {
+							background-color: $gray;
+						}
+					}
+					&:active {
+						background-color: $gray;
+						background-color: $color_storm_dust_approx \9;
+					}
+					&.active {
+						background-color: $gray;
+						background-color: $color_storm_dust_approx \9;
+					}
+					&.disabled {
+						background-color: $gray;
+					}
+					&:hover[disabled] {
+						background-color: $gray;
+					}
+				}
+				&:active {
+					background-color: $gray;
+					background-color: $color_storm_dust_approx \9;
+				}
+				&.active {
+					background-color: $gray;
+					background-color: $color_storm_dust_approx \9;
+				}
+				&:hover[disabled] {
+					background-color: $gray;
+				}
+				&.disabled[disabled] {
+					background-color: $gray;
+				}
+			}
+			&.selected[disabled] {
+				background-color: $gray;
+			}
+			&.active {
+				@extend %extend_6;
+				&:hover {
+					@extend %extend_6;
+					background-color: $color_cobalt_approx;
+					&:hover {
+						background-color: $color_cobalt_approx;
+					}
+					&:active {
+						background-color: $color_cobalt_approx;
+						background-color: $smalt \9;
+					}
+					&.active {
+						background-color: $color_cobalt_approx;
+						background-color: $smalt \9;
+					}
+					&.disabled {
+						background-color: $color_cobalt_approx;
+					}
+				}
+				&.disabled {
+					@extend %extend_6;
+					background-color: $color_cobalt_approx;
+					&:hover {
+						@extend %extend_6;
+						background-color: $color_cobalt_approx;
+						&:hover {
+							background-color: $color_cobalt_approx;
+						}
+						&:active {
+							background-color: $color_cobalt_approx;
+							background-color: $smalt \9;
+						}
+						&.active {
+							background-color: $color_cobalt_approx;
+							background-color: $smalt \9;
+						}
+						&.disabled {
+							background-color: $color_cobalt_approx;
+						}
+					}
+					&:active {
+						background-color: $color_cobalt_approx;
+						background-color: $smalt \9;
+					}
+					&.active {
+						background-color: $color_cobalt_approx;
+						background-color: $smalt \9;
+					}
+					&.disabled {
+						background-color: $color_cobalt_approx;
+					}
+					&:hover[disabled] {
+						background-color: $color_cobalt_approx;
+					}
+				}
+				&:active {
+					background-color: $color_cobalt_approx;
+					background-color: $smalt \9;
+				}
+				&.active {
+					background-color: $color_cobalt_approx;
+					background-color: $smalt \9;
+				}
+				&:hover[disabled] {
+					background-color: $color_cobalt_approx;
+				}
+				&.disabled[disabled] {
+					background-color: $color_cobalt_approx;
+				}
+			}
+			&.active[disabled] {
+				background-color: $color_cobalt_approx;
+			}
+			span {
+				display: block;
+				width: 23%;
+				height: 54px;
+				line-height: 54px;
+				float: left;
+				margin: 1%;
+				cursor: pointer;
+				//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+				border-radius: 4px;
+				&:hover {
+					background: $color_gallery_approx;
+				}
+				&.disabled {
+					@extend %extend_7;
+					&:hover {
+						@extend %extend_7;
+					}
+				}
+				&.active {
+					@extend %extend_8;
+					&:hover {
+						@extend %extend_8;
+						background-color: $color_cobalt_approx;
+						&:hover {
+							background-color: $color_cobalt_approx;
+						}
+						&:active {
+							background-color: $color_cobalt_approx;
+							background-color: $smalt \9;
+						}
+						&.active {
+							background-color: $color_cobalt_approx;
+							background-color: $smalt \9;
+						}
+						&.disabled {
+							background-color: $color_cobalt_approx;
+						}
+					}
+					&.disabled {
+						@extend %extend_8;
+						background-color: $color_cobalt_approx;
+						&:hover {
+							@extend %extend_8;
+							background-color: $color_cobalt_approx;
+							&:hover {
+								background-color: $color_cobalt_approx;
+							}
+							&:active {
+								background-color: $color_cobalt_approx;
+								background-color: $smalt \9;
+							}
+							&.active {
+								background-color: $color_cobalt_approx;
+								background-color: $smalt \9;
+							}
+							&.disabled {
+								background-color: $color_cobalt_approx;
+							}
+						}
+						&:active {
+							background-color: $color_cobalt_approx;
+							background-color: $smalt \9;
+						}
+						&.active {
+							background-color: $color_cobalt_approx;
+							background-color: $smalt \9;
+						}
+						&.disabled {
+							background-color: $color_cobalt_approx;
+						}
+						&:hover[disabled] {
+							background-color: $color_cobalt_approx;
+						}
+					}
+					&:active {
+						background-color: $color_cobalt_approx;
+						background-color: $smalt \9;
+					}
+					&.active {
+						background-color: $color_cobalt_approx;
+						background-color: $smalt \9;
+					}
+					&:hover[disabled] {
+						background-color: $color_cobalt_approx;
+					}
+					&.disabled[disabled] {
+						background-color: $color_cobalt_approx;
+					}
+				}
+				&.active[disabled] {
+					background-color: $color_cobalt_approx;
+				}
+				&.old {
+					color: $color_mountain_mist_approx;
+				}
+				&.new {
+					color: $color_mountain_mist_approx;
+				}
+			}
+			&.day:hover {
+				background: $color_gallery_approx;
+				cursor: pointer;
+			}
+		}
+	}
+	td {
+		@extend %extend_1;
+	}
+	th {
+		@extend %extend_1;
+		&.datepicker-switch {
+			width: 145px;
+		}
+	}
+	.cw {
+		font-size: 10px;
+		width: 12px;
+		padding: 0 2px 0 5px;
+		vertical-align: middle;
+	}
+	&.days div.datepicker-days {
+		display: block;
+	}
+	&.months div.datepicker-months {
+		display: block;
+	}
+	&.years div.datepicker-years {
+		display: block;
+	}
+	thead tr:first-child th {
+		cursor: pointer;
+		&:hover {
+			background: $color_gallery_approx;
+		}
+		&.cw {
+			cursor: default;
+			background-color: transparent;
+		}
+	}
+	tfoot tr th {
+		cursor: pointer;
+		&:hover {
+			background: $color_gallery_approx;
+		}
+	}
+}
+.datepicker-inline {
+	width: 220px;
+}
+.datepicker-dropdown {
+	top: 0;
+	left: 0;
+	&:before {
+		content: '';
+		display: inline-block;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid $color_celeste_approx;
+		border-top: 0;
+		border-bottom-color: $black_20;
+		position: absolute;
+	}
+	&:after {
+		content: '';
+		display: inline-block;
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-bottom: 6px solid $white;
+		border-top: 0;
+		position: absolute;
+	}
+	&.datepicker-orient-left {
+		&:before {
+			left: 6px;
+		}
+		&:after {
+			left: 7px;
+		}
+	}
+	&.datepicker-orient-right {
+		&:before {
+			right: 6px;
+		}
+		&:after {
+			right: 7px;
+		}
+	}
+	&.datepicker-orient-top {
+		&:before {
+			top: -7px;
+		}
+		&:after {
+			top: -6px;
+		}
+	}
+	&.datepicker-orient-bottom {
+		&:before {
+			bottom: -7px;
+			border-bottom: 0;
+			border-top: 7px solid $color_mountain_mist_approx;
+		}
+		&:after {
+			bottom: -6px;
+			border-bottom: 0;
+			border-top: 6px solid $white;
+		}
+	}
+}
+.input-daterange {
+	input {
+		text-align: center;
+		&:first-child {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 3px 0 0 3px;
+		}
+		&:last-child {
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0 3px 3px 0;
+		}
+	}
+	.add-on {
+		display: inline-block;
+		width: auto;
+		min-width: 16px;
+		height: 18px;
+		padding: 4px 5px;
+		font-weight: normal;
+		line-height: 18px;
+		text-align: center;
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: 0 1px 0 $white;
+		vertical-align: middle;
+		background-color: $color_gallery_approx;
+		border: 1px solid $color_celeste_approx;
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+}
+.table-striped .datepicker table tr {
+	td {
+		background-color: transparent;
+	}
+	th {
+		background-color: transparent;
+	}
+}
+.input-append.date .add-on i {
+	@extend %extend_9;
+}
+.input-prepend.date .add-on i {
+	@extend %extend_9;
+}
